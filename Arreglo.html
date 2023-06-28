@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglo</title>
+    <script>
+        function boton(){
+            let texto = document.getElementById("arr").value;
+            let arreglo = texto.split("");
+            let lugar = document.getElementById("lugar").value;
+            let agrgar = document.getElementById("add").value;
+
+            arreglo.splice(lugar,1,agrgar);
+            return document.write(arreglo);
+        
+        }
+    </script>
+</head>
+<body>
+    <form>
+        Arreglo:
+        <input type="text" id="arr">
+        Agregar:
+        <input type="number" id="add">
+        Lugar: (empieza desde 0)
+        <input type="text" id="lugar">
+        <button onclick="arreglo()">Click</button>
+    </form>
+</body>
+</html>
